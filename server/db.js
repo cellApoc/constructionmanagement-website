@@ -44,7 +44,7 @@ function buildOpts() {
 
 async function getPool() {
   if (!poolPromise) {
-    const { createPgPool } = await import('@apoc/aws-pg-connect/pg');
+    const { createPgPool } = await import('@cellapoc/aws-pg-connect/pg');
     poolPromise = createPgPool(buildOpts()).then(async (pool) => {
       pool.on('error', (err) => console.error('[DB] Pool error:', err.message));
       const client = await pool.connect();
