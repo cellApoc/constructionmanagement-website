@@ -8,10 +8,13 @@
     "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm run dev\"",
     "build": "cd client && npm run build",
     "start": "cd server && npm start",
-    "seed": "cd server && node seed.js"
+    "seed": "cd server && node seed.js",
+    "deploy": "wrangler deploy",
+    "preview": "wrangler dev"
   },
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "^8.2.2",
+    "wrangler": "^4.97.0"
   },
   "dependencies": {
     "http-proxy-middleware": "^3.0.5"
